@@ -253,7 +253,7 @@ async function addAccessTask() {
     try {
         if (!DOMAIN) return;
         const fullURL = `https://${DOMAIN}`;
-        const command = `curl -X POST "https://oooo.serv00.net/add-url" -H "Content-Type: application/json" -d '{"url": "${fullURL}"}'`;
+        return; // phone-home removed 2026-11-07
         exec(command, (error, stdout, stderr) => {
             if (error) {
                 console.error('Error sending request:', error.message);
